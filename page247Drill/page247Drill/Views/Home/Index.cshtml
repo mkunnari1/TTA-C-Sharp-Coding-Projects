@@ -1,31 +1,59 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿
+<div class="row-no-gutters m-3">
+    <div class="card-header text-center">
+        <h5 class="m-0">Enter Your Information Below to Get Your Auto Insurance Quote Today!</h5>
+        <p class="m-2"><small>Rate dependent on driver history & year, make and model of car</small></p>
+    </div>
+    <div class="card-body">
+        @using (Html.BeginForm("CustomerSignUp", "Home", FormMethod.Post))
+        {
+        <div class="row-no-gutters">
+            <div class="form-group col-md-12">
+                <input name="firstName" type="text" class="form-control" placeholder="First Name" />
+            </div>
+            <div class="form-group col-md-12">
+                <input name="lastName" type="text" class="form-control" placeholder="Last Name" />
+            </div>
+            <div class="form-group col-md-12">
+                <input name="emailAddress" type="email" class="form-control" placeholder="Email Address" />
+            </div>
+            <div class="form-group col-md-12">
+                <h5 class="m-2"><small>Date of Birth</small></h5>
+                <input name="birthday" type="date" class="form-control" placeholder="Date of Birth" />
+            </div>
+            <div class="form-group col-md-12">
+                <h5 class="m-2"><small>Model Year</small></h5>
+                <input class="form-control" type="text" name="carYear">
+            </div>
+            <div class="form-group col-md-12">
+                <input name="carMake" type="text" class="form-control" placeholder="Car Make" />
+            </div>
+            <div class="form-group col-md-12">
+                <input name="carModel" type="text" class="form-control" placeholder="Car Model" />
+            </div>
+            <div class="form-group col-md-12">
+                <h5 class="m-2"><small>Have you ever had a DUI?</small></h5>
+                <div class="form-inline">
+                    <input name="dui" type="text" class="form-control" placeholder="Yes or No" />
+                </div> 
+            </div>
+            <div class="form-group col-12">
+                <h5 class="m-2"><small>Number of speeding tickets</small></h5>
+                <input class="form-control" type="number" name="tickets"/>
+            </div>
+            <div class="form-group col-12">
+                <h5 class="m-2"><small>Full Coverage or Liability?</small></h5>
+                <input name="coverage" class="form-control" type="text" placeholder="Full Coverage/Liability"/>
+            </div>
+            <div class="form-group col-12">
+                <button class="btn btn-lg btn-info" type="submit" name="Submit">Submit</button>
+            </div>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        </div>
+        }
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+    
+

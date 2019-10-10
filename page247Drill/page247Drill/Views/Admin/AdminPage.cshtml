@@ -1,0 +1,44 @@
+﻿@model List<Customer>
+
+<div class="row no-gutters m-2">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Quotes</h5>
+        </div>
+        <div class="card-body">
+            @foreach(var customer in Model)
+            {
+            <div class="row">
+                <div class="col">
+                    @customer.firstName
+                </div>
+                <div class="col">
+                    @customer.lastName
+                </div>
+                <div class="col">
+                    @customer.emailAddress
+                </div>
+                <div class="col">
+                    @customer.birthday
+                </div>
+                <div class="col">
+                    @customer.carYear
+                </div>
+                <div class="col">
+                    @customer.carMake
+                </div>
+                <div class="col">
+                    @customer.carModel
+                </div>
+                <div class="col">
+                    @customer.dui
+                </div>
+                <div class="col">
+                    @customer.coverage
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+

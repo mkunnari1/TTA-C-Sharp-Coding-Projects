@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InsuranceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="25" />
+    <Property Name="lastName" Type="varchar" MaxLength="25" />
+    <Property Name="emailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="birthday" Type="date" />
+    <Property Name="carYear" Type="int" />
+    <Property Name="carMake" Type="varchar" MaxLength="25" />
+    <Property Name="carModel" Type="varchar" MaxLength="25" />
+    <Property Name="dui" Type="varchar" MaxLength="5" />
+    <Property Name="tickets" Type="int" />
+    <Property Name="coverage" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityContainer Name="InsuranceModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
