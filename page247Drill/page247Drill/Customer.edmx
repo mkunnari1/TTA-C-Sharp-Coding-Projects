@@ -20,6 +20,7 @@
           <Property Name="dui" Type="varchar" MaxLength="5" />
           <Property Name="tickets" Type="int" />
           <Property Name="coverage" Type="varchar" MaxLength="25" />
+          <Property Name="cost" Type="int" />
         </EntityType>
         <EntityContainer Name="InsuranceModelStoreContainer">
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
@@ -44,8 +45,9 @@
           <Property Name="dui" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="tickets" Type="Int32" />
           <Property Name="coverage" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="cost" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="InsuranceEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="InsuranceEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customers" EntityType="Self.Customer" />
         </EntityContainer>
       </Schema>
@@ -53,7 +55,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="InsuranceModelStoreContainer" CdmEntityContainer="InsuranceEntities1">
+        <EntityContainerMapping StorageEntityContainer="InsuranceModelStoreContainer" CdmEntityContainer="InsuranceEntities2">
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="InsuranceModel.Customer">
               <MappingFragment StoreEntitySet="Customer">
@@ -68,6 +70,7 @@
                 <ScalarProperty Name="dui" ColumnName="dui" />
                 <ScalarProperty Name="tickets" ColumnName="tickets" />
                 <ScalarProperty Name="coverage" ColumnName="coverage" />
+                <ScalarProperty Name="cost" ColumnName="cost" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

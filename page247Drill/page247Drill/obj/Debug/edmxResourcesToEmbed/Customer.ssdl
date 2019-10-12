@@ -15,6 +15,7 @@
     <Property Name="dui" Type="varchar" MaxLength="5" />
     <Property Name="tickets" Type="int" />
     <Property Name="coverage" Type="varchar" MaxLength="25" />
+    <Property Name="cost" Type="int" />
   </EntityType>
   <EntityContainer Name="InsuranceModelStoreContainer">
     <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />

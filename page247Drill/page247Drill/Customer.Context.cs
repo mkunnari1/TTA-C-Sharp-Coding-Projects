@@ -13,10 +13,10 @@ namespace page247Drill
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class InsuranceEntities1 : DbContext
+    public partial class InsuranceEntities2 : DbContext
     {
-        public InsuranceEntities1()
-            : base("name=InsuranceEntities1")
+        public InsuranceEntities2()
+            : base("name=InsuranceEntities2")
         {
         }
     

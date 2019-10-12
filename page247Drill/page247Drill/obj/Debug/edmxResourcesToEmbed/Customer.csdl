@@ -15,8 +15,9 @@
     <Property Name="dui" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
     <Property Name="tickets" Type="Int32" />
     <Property Name="coverage" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="cost" Type="Int32" />
   </EntityType>
-  <EntityContainer Name="InsuranceEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="InsuranceEntities2" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Customers" EntityType="Self.Customer" />
   </EntityContainer>
 </Schema>

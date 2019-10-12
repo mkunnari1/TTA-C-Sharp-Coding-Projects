@@ -13,9 +13,7 @@
         <h5 class="m-0">@cust.firstName @cust.lastName</h5>
     </div>
     <div class="card-body">
-        @{
-            var quote = ViewBag.Message2;
-        }
-        <h3 class="row m-0">$ @quote /Month</h3>
+       
+        <h3 class="row m-0">$ @cust.cost /Month</h3>
     </div>
 </div>

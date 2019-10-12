@@ -1,0 +1,35 @@
+﻿
+
+
+
+<div class="row no-gutters m-2">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Quotes</h5>
+        </div>
+        <div class="card-body">
+            @{ 
+                var cust = ViewBag.Message;
+            }
+            @foreach (var customer in cust)
+            {
+                <div class="row">
+                    <div class="col">
+                        @customer.firstName
+                    </div>
+                    <div class="col">
+                        @customer.lastName
+                    </div>
+                    <div class="col">
+                        @customer.emailAddress
+                    </div>
+                    <div class="col">
+                        @customer.cost
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

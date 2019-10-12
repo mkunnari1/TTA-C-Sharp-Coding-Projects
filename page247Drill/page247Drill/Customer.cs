@@ -25,5 +25,6 @@ namespace page247Drill
         public string dui { get; set; }
         public Nullable<int> tickets { get; set; }
         public string coverage { get; set; }
+        public Nullable<int> cost { get; set; }
     }
 }
