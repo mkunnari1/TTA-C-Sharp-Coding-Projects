@@ -28,7 +28,7 @@ namespace page247Drill.Controllers
             {
                 using (InsuranceEntities1 db = new InsuranceEntities1())
                 {
-                    var customer = new Customer();
+                    Customer customer = new Customer();
                     customer.firstName = firstName;
                     customer.lastName = lastName;
                     customer.emailAddress = emailAddress;
@@ -42,17 +42,49 @@ namespace page247Drill.Controllers
 
                     db.Customers.Add(customer);
                     db.SaveChanges();
-                }
-            }
 
+                    ViewBag.Message = customer;
+                }
+                int cost = 50;
+                var bday = Convert.ToDateTime(birthday);
+                DateTime now = DateTime.Today;
+                int age = now.Year - bday.Year;
+                if (bday > now.AddYears(-age)) age--;
+
+                if (age < 25 && age > 18) cost = cost+ 25;
+                if (age < 18) cost = cost +100;
+                if (age > 100) cost =  cost + 25;
+                if (carYear < 2000) cost =  cost + 25;
+                if (carYear > 2015) cost = cost + 25;
+                if (carMake.ToLower() == "porsche") cost = cost + 25;
+                if (carMake.ToLower() == "porsche" && carModel.ToLower() == "911 carrera") cost = cost + 25;
+                if (tickets > 0) cost = cost + (tickets * 10);
+                if (dui.ToLower() == "yes") cost = cost + (cost / 4);
+                if (coverage.ToLower() == "full coverage") cost = cost + (cost / 2);
+
+                ViewBag.Message2 = cost;
+            }
+            
+            
             return View("Quote");
         }
-        public ActionResult Quote( int id, string firstName, string lastName, string emailAddress, string birthday, int carYear,
-            string carMake, string carModel, string dui, int tickets, string coverage)
+        
+        public ActionResult Admin()
         {
-            
-            return View();
+            using(InsuranceEntities1 db = new InsuranceEntities1())
+            {
+                var quotes = db.Customers;
+                var adminQuotes = new List<Customer>();
+                foreach(var quote in quotes)
+                {
+                    var adminQuote = new Customer();
+                    adminQuote.firstName = quote.firstName;
+                    adminQuote.lastName = quote.lastName;
+                    adminQuote.emailAddress = quote.emailAddress;
+                    
+                    
+                }
+            }
         }
-
     }
 }

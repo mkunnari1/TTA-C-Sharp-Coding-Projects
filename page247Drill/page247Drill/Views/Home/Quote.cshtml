@@ -1,4 +1,21 @@
 ﻿
 
-<h2></h2>
 
+
+
+<div class="row no-gutters m-3">
+    <div class="card-header text-center">
+        <h3 class="m-0">Personalized quote for:</h3>
+        @{ 
+            var cust = ViewBag.Message;
+        }
+        
+        <h5 class="m-0">@cust.firstName @cust.lastName</h5>
+    </div>
+    <div class="card-body">
+        @{
+            var quote = ViewBag.Message2;
+        }
+        <h3 class="row m-0">$ @quote /Month</h3>
+    </div>
+</div>

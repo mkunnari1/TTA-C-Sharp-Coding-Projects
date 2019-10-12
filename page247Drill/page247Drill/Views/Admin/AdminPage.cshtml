@@ -1,4 +1,6 @@
-﻿@model List<Customer>
+﻿@using page247Drill.ViewModels
+
+@model List<AdminCustQuote>
 
 <div class="row no-gutters m-2">
     <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
@@ -19,22 +21,7 @@
                     @customer.emailAddress
                 </div>
                 <div class="col">
-                    @customer.birthday
-                </div>
-                <div class="col">
-                    @customer.carYear
-                </div>
-                <div class="col">
-                    @customer.carMake
-                </div>
-                <div class="col">
-                    @customer.carModel
-                </div>
-                <div class="col">
-                    @customer.dui
-                </div>
-                <div class="col">
-                    @customer.coverage
+                    @customer.Quote
                 </div>
             </div>
             }
