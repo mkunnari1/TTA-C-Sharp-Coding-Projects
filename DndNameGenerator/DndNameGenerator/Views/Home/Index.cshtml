@@ -1,27 +1,19 @@
 ﻿<body>
     <div class="card no-gutters">
         <div class="card-header text-center col-12">
-            <h3 class="m-0">Welcome to the D&D name generator</h3>
-            <p class="m-2">Please enter your information below to recieve a name</p>
+            <h3 class="m-0">Welcome to the D&D name database</h3>
+            <p class="m-2">Please enter in a new race below or pick a race from the list to access stored names</p>
         </div>
-        <div class="card-body">
-            @using (Html.BeginForm("UserInput", "Home", FormMethod.Post))
-            {
-            <div class="col-12 row no-gutters">
-                <div class="form-group col-md-12">
-                    <input name="firstName" type="text" class="form-control" placeholder="First Name" />
-                </div>
-                <div class="form-group col-md-12">
-                    <input name="lastName" type="text" class="form-control" placeholder="Last Name" />
-                </div>
-                <div class="form-group col-md-12">
-                    <input name="race" type="text" class="form-control" placeholder="Race" />
-                </div>
-
-            </div>
-            }
-            <div class="col-12 text-center no-gutters">
-                <output name="charName">Will eventually be Char Name</output>
+        <div id="page" class="card-body">
+           <div id="menu">
+               <ul data-bind="foreach: menuitems">
+                   <li>
+                       <span data-bind="text: name, Click: $root.menuClick"> </span>
+                   </li>
+               </ul>
+           </div>
+            <div id="content" class="col-12 text-center no-gutters">
+                
             </div>
         </div>
     </div>

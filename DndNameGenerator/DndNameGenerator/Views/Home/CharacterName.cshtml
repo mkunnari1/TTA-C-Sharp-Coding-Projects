@@ -1,0 +1,13 @@
+﻿
+<div id="banner">Character Names</div>
+<ul data-bind="foreach: races">
+    <li>
+        <span data-bind="text: name"></span>
+        <ul data-bind="foreach: characters">
+            <li>
+                <span data-bind="text: name"></span>
+            </li>
+        </ul>
+    </li>
+</ul>
+

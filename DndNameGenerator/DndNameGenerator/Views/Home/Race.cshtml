@@ -1,0 +1,31 @@
+﻿<div id="banner">Race List</div>
+<div>
+    <input data-bind="value: NewRace.name" />
+    <button data-bind="click: AddRace">Add Race</button>
+</div>
+<table>
+    <thead>
+        <tr><th>Name</th></tr>
+    </thead>
+    <tbody data-bind="foreach: races">
+        <tr>
+            <td>
+                <span data-bind="text: name, visible: !isEdit()"></span>
+                <input type="hidden" data-bind="value: id" />
+                <input data-bind="value: name, visible: isEdit" />
+            </td>
+            <td>
+                <div data-bind="visible: !isEdit()">
+                    <button data-bind="click: $root.EditRace">Edit</button>
+                    <button data-bind="click: $root.DeleteRace">Delete</button>
+                </div>
+
+                <div data-bind="visible: isEdit">
+                    <button data-bind="click: $root.UpdateRace">Update</button>
+                    <button data-bind="click: $root.CancelRace">Cancel</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
