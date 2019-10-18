@@ -238,19 +238,16 @@
         </div>
         <!--End Delete Modal-->
     </div>
-    <!-- External JavaScript files -->
-    <!-- External JavaScript files -->
+
     <script type='text/javascript' src='~/Scripts/jquery-3.3.1.min.js'></script>
     <script type='text/javascript' src='~/Scripts/bootstrap.min.js'></script>
     <script type='text/javascript' src='~/Scripts/knockout-3.4.2.js'></script>
     <script type='text/javascript' src='~/Scripts/knockout.mapping-latest.js'></script>
     <script type='text/javascript' src='~/Scripts/js/product.js'></script>
-    <!-- load sampe json data (variable name: data) -->
     <script type='text/javascript' src='~/Scripts/js/custom.js'></script>
 
     <script type="text/javascript">
         $('document').ready(function () {
-            // Attach an instance of PageViewModel into this page.
             ko.applyBindings(new PageViewModel(data));
         });
     </script>
