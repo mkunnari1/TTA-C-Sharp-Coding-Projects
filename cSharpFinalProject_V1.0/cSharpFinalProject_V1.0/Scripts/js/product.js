@@ -1,4 +1,6 @@
-﻿var data = [
+﻿//Sample Data sets so something shows up on the page upon load
+
+var data = [
     {
         "ID": 1,
         "productName": "Doom Bird III",

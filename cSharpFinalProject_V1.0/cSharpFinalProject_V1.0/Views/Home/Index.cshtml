@@ -67,7 +67,7 @@
                             <div class="form-group row">
                                 <label for="company-input" class="col-4 col-form-label">Company</label>
                                 <div class="col-8">
-                                    <input class="form-control" id="price-input" data-bind="value: productPrice" />
+                                    <input class="form-control" id="company-input" data-bind="value: companyName" />
                                 </div>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
         </div>
         <!--End Add Modal-->
         <!--View Modal-->
-        <div id="view-product-model" class="modal fade" role="dialog">
+        <div id="view-product-modal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -90,7 +90,7 @@
                         <div class="form-horizontal" data-bind="with: selectedProduct">
                             <h4>Product</h4>
                             <hr />
-                            <dl class="dl-horizontal">
+                            
                                 <div class="form-group row">
                                     <label class="col-4">ID</label>
                                     <div class="col-8">
@@ -127,11 +127,11 @@
                                         <p data-bind="text: addedDate"></p>
                                     </div>
                                 </div>
-                            </dl>
+                            
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -189,7 +189,6 @@
                         <div id="delete-product" data-bind="with: selectedProduct">
                             <h4>Product</h4>
                             <hr />
-                            <dl class="dl-horizontal">
                                 <div class="form-group row">
                                     <label class="col-4">ID</label>
                                     <div class="col-8">
@@ -226,7 +225,7 @@
                                         <p data-bind="text: addedDate" />
                                     </div>
                                 </div>
-                            </dl>
+                            
                             <input hidden data-bind="value: ID" id="ID" name="ID" />
                         </div>
                     </div>
